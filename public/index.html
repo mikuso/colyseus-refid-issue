@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Example</title>
+    <script src="https://unpkg.com/colyseus.js@^0.16.11/dist/colyseus.js"></script>
+</head>
+
+<body>
+    
+<script>
+async function main() {
+    
+    // connect & create room
+    let client = new Colyseus.Client(window.location.href);
+    const room = await client.joinOrCreate('my_room', {});
+
+    /*
+     * The above 2 lines are all that's needed to demonstrate the issue.
+     * However, feel free to uncomment the code below to see a bit more feedback in the console
+     * whenever items are added/removed from the room.entities array...
+     */
+
+
+
+    // const state = room.state;
+    // const $ = Colyseus.getStateCallbacks(room);
+    // const stateProxy = $(state);
+
+    // stateProxy.entities.onAdd((state) => {
+    //     console.log('adding', state);
+    // });
+
+    // stateProxy.entities.onRemove((state) => {
+    //     console.log('removing', state);
+    // });
+
+}
+
+main().catch(console.error);
+</script>
+
+</body>
+</html>
