@@ -14,6 +14,8 @@ export class MyRoom extends Room {
     state = new MyRoomState();
 
     onCreate(options) {
+        this.autoDispose = false;
+        
         // crucial #1: the patch rate must be higher than the frequency of
         // updates to the members of the ArraySchema instance.
         this.patchRate = 420;
