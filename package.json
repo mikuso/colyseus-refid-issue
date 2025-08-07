@@ -11,9 +11,9 @@
     "start": "node src/index.js"
   },
   "dependencies": {
-    "@colyseus/core": "0.16.17",
-    "@colyseus/schema": "3.0.37",
-    "@colyseus/tools": "0.16.8",
+    "@colyseus/core": "0.16.19",
+    "@colyseus/schema": "3.0.51",
+    "@colyseus/tools": "0.16.13",
     "@colyseus/ws-transport": "0.16.5"
   }
 }
